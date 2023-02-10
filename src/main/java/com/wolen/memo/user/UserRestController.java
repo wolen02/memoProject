@@ -24,6 +24,7 @@ public class UserRestController {
 			,@RequestParam("name") String name
 			,@RequestParam("email") String email){
 		
+		
 		int count = userBO.addUser(loginId, password, name, email);
 		
 		Map<String, String> result = new HashMap<>();
