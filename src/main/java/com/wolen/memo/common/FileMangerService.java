@@ -9,23 +9,23 @@ import java.nio.file.Paths;
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileMangerService {
-
+	
+	public static final String FILE_UPLOAD_PATH ="C:\\Users\\wnwlt\\Desktop\\springProject\\upload\\images";
 	
 	// 파이 저장 및 클라이언트에서 접근가능한 주소를 만들어서 리턴하는 기능
 	public static String saveFile(int userId, MultipartFile file) {
 		
 		// 파일 저장
-		String fileUploadPath ="C:\\Users\\wnwlt\\Desktop\\springProject\\upload\\images";
 		
 		// 사용자 별로 폴더를 구분한다.
 		// 사용자 별로 폴더를 새로 만든다.
 		// 폴더이름 : userId_현재시간
 		//C:\\Users\\wnwlt\\Desktop\\springProject\\upload\\images\\2_3143135\\adfa.png
 		
-		String directoryName = "/" + userId + " " + System.currentTimeMillis() + "/";
+		String directoryName = "/" + userId + "_" + System.currentTimeMillis() + "/";
 		
 		// 디렉토리 생성
-		String directoryPath = fileUploadPath + directoryName;
+		String directoryPath = FILE_UPLOAD_PATH + directoryName;
 		File directory = new File(directoryPath);
 		if(directory.mkdir()==false) {
 			//디렉토리 생성 실패
