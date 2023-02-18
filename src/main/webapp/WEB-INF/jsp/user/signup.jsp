@@ -21,7 +21,6 @@
 			<div class="join-box my-5">
 				<h2 class="text-center">회원가입</h2>
 				<input type="text" id="inputLoginId" placeholder="아이디" class="form-control mt-2">
-				<button type="button" class="btn btn-primary">중복확인</button>
 				<input type="password" id="inputPassword" placeholder="비밀번호" class="form-control mt-2">
 				<input type="password" id="inputConfirmPassword" placeholder="비밀번호 확인" class="form-control mt-2">
 				<input type="text" id="inputName" placeholder="이름" class="form-control mt-2">

@@ -16,6 +16,15 @@ header{
 	width:350px;
 }
 
+.list_box{
+	width:800px;
+	height:500px;
+}
+
+.input-box{
+	width:650px;
+}
+
 footer{
 	height:50px;
 	background-color:#dddddd;
